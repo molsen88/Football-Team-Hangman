@@ -3,9 +3,6 @@
     font-family: 'Nunito', sans-serif;
     font-size: 50px;
     color:rgb(28, 28, 31);
-    
-    
-
 }
 
 .guessing-area{
@@ -41,6 +38,7 @@
     cursor: grabbing;
     outline: none;
 }
+
 #select-button:hover{
     color:rgb(61, 61, 63);
     background-color:#e3e3e7;
@@ -57,6 +55,7 @@
   cursor: grabbing;
   outline: none;
 }
+
 #new-game:hover{
     color:rgb(61, 61, 63);
     background-color:#e3e3e7;
