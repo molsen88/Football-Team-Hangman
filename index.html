@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="hangman.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <title>Document</title>
+
+    </head>
+
+    <body>
+        <div class='title' id='game-title'>
+            <h1>Football Team Hangman</h1>
+        </div>
+        <wrapper>
+            <div>
+                <input type="text" placeholder="Pick a letter" class="letter-input" id="user-input">
+                <button type="button" id="select-button">Select</button>
+                <button type="button" id="new-game">New Game</button>
+                <div id='letters-guessed'>Letters Guessed:</div>
+                <div id='guesses-left'></div>
+            </div>
+            <div>
+                <div class='guessing-area' id='guess-spot'>
+                </div>
+            </div>
+        </wrapper>
+
+
+
+        <script src="hangman.js"></script>
+    </body>
+
+</html>
