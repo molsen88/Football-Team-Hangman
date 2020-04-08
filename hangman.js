@@ -63,8 +63,13 @@ getUserInput = () => {
     // enterKey();
     document.getElementById( "select-button" ).addEventListener( "click", function () {
         let userInput = document.getElementById( "user-input" ).value;
-        document.getElementById( 'user-input' ).value = '';
         console.log( userInput )
+        let upper = userInput.toUpperCase();
+        // console.log( upper )
+        let lower = userInput.toLowerCase();
+        // console.log( lower )
+        document.getElementById( 'user-input' ).value = '';
+
         lettersGuessed.push( userInput )
 
 
@@ -83,7 +88,7 @@ getUserInput = () => {
         document.getElementById( 'letters-guessed' ).innerHTML = `Letters Guessed: ${lettersGuessed} `;
 
         for ( var i = 0; i < wordSplit.length; i++ ) {
-            if ( userInput === wordSplit[i] ) {
+            if ( userInput === wordSplit[i] || upper === wordSplit[i] || lower === wordSplit[i] ) {
                 correctLetters.push( userInput );
                 underscores[i] = wordSplit[i]
                 console.log( underscores )
@@ -99,7 +104,7 @@ getUserInput = () => {
         }
 
         if ( guessesLeft === 0 ) {
-            alert( 'Game Over' )
+            alert( 'Game Over!' )
             location.reload();
         }
 
