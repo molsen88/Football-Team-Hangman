@@ -13,6 +13,8 @@ let wordSplit;
 let dog;
 let spaces;
 let correctUnderscores;
+let wins = 0;
+let losses = 0;
 
 
 
@@ -97,6 +99,8 @@ getUserInput = () => {
             }
         }
 
+
+
         var wrongChoice = ( wordSplit.indexOf( userInput ) );
         if ( wrongChoice === -1 ) {
             guessesLeft -= 1
@@ -105,6 +109,8 @@ getUserInput = () => {
 
         if ( guessesLeft === 0 ) {
             alert( 'Game Over!' )
+            // losses++;
+            // document.getElementById( 'losses' ).innerHTML = losses;
             location.reload();
         }
 
@@ -128,6 +134,12 @@ newGame = () => {
 startGame();
 getUserInput();
 newGame();
+
+//TO DO
+
+// 1. Record wins and losses
+
+// 2. Reset game instead of reload.
 
 
 

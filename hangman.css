@@ -3,6 +3,7 @@
     font-family: 'Nunito', sans-serif;
     font-size: 50px;
     color:rgb(28, 28, 31);
+    margin-bottom: 50px;
 }
 
 .guessing-area{
@@ -15,7 +16,7 @@
     font-family: 'Nunito', sans-serif;
     font-size: 90px;
     color: rgb(61, 61, 63);
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .letter-input{
@@ -61,16 +62,26 @@
     background-color:#e3e3e7;
 }
 
+#wins{
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+}
+
+#losses{
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+}
+
 #letters-guessed{
     text-align: left;
-    margin-top: 50px;
-    font-size: 55px;
+    margin-top: 30px;
+    font-size: 45px;
     font-family: 'Nunito', sans-serif;
 }
 
 #guesses-left{
    font-family: 'Nunito', sans-serif;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 
