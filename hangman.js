@@ -2,7 +2,9 @@
 
 let fruits = ['Liverpool', 'Manchester City', 'Tottenham', 'Chelsea', 'Manchester United', 'Arsenal', 'Everton', 'Burnley', 'Wolverhampton',
     'Newcastle United', 'Norwich City', 'West Ham United', 'Southampton', 'Brighton', 'Wigan', 'Crystal Palace', 'Aston Villa', 'Leicester City',
-    'Sheffield United', 'Watford', 'Bournemouth'];
+    'Sheffield United', 'Watford', 'Bournemouth', 'Reading', 'Ipswich Town', 'Swansea', 'Sunderland', 'Preston', 'Birmingham', 'Portsmouth',
+    'Leeds United', 'West Brom', 'Stoke City', 'Queens Park Rangers', 'Fulham', 'Blackburn', 'Millwall', 'Derby County', 'Charlton', 'Hull City',
+    'Huddersfield', 'Middlesbrough', 'Barnsley', 'Bristol City', 'Brentford', 'Bolton', 'Wycombe'];
 let lettersGuessed = [];
 let underscores = [];
 let choiceUnderscore, userInput;
