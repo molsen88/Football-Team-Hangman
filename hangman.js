@@ -1,6 +1,6 @@
 //Declared variables
 
-let fruits = ['Liverpool', 'Manchester City', 'Tottenham', 'Chelsea', 'Manchester United', 'Arsenal', 'Everton', 'Burnley', 'Wolverhampton',
+let teams = ['Liverpool', 'Manchester City', 'Tottenham', 'Chelsea', 'Manchester United', 'Arsenal', 'Everton', 'Burnley', 'Wolverhampton',
     'Newcastle United', 'Norwich City', 'West Ham United', 'Southampton', 'Brighton', 'Wigan', 'Crystal Palace', 'Aston Villa', 'Leicester City',
     'Sheffield United', 'Watford', 'Bournemouth', 'Reading', 'Ipswich Town', 'Swansea', 'Sunderland', 'Preston', 'Birmingham', 'Portsmouth',
     'Leeds United', 'West Brom', 'Stoke City', 'Queens Park Rangers', 'Fulham', 'Blackburn', 'Millwall', 'Derby County', 'Charlton', 'Hull City',
@@ -33,7 +33,7 @@ startGame = () => {
 
 // 1. Get a fruit
 getTeam = () => {
-    let choice = fruits[Math.floor( Math.random() * fruits.length )];
+    let choice = teams[Math.floor( Math.random() * teams.length )];
     console.log( choice )
     wordSplit = choice.split( '' );
     console.log( wordSplit )
@@ -142,6 +142,8 @@ newGame();
 // 1. Record wins and losses
 
 // 2. Reset game instead of reload.
+
+// 3. Create a space for two words
 
 
 
