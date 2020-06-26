@@ -1,66 +1,66 @@
-
-
-.title{
-    font-family: 'Nunito', sans-serif;
-    font-size: 50px;
-    color:rgb(28, 28, 31);
-    margin-bottom: 50px;
+.title {
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  color: rgb(28, 28, 31);
+  margin-bottom: 50px;
 }
 
-.guessing-area{
-    text-align: center;
-    margin-top: 80px;
-    font-size: 30px;
+.guessing-area {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 30px;
 }
 
-#guess-spot{
-    font-family: 'Nunito', sans-serif;
-    font-size: 90px;
-    color: rgb(61, 61, 63);
-    margin-bottom: 60px;
+#guess-spot {
+  font-family: "Nunito", sans-serif;
+  font-size: 90px;
+  color: rgb(61, 61, 63);
+  margin-bottom: 60px;
 }
 
-.letter-input{
-    font-size: 40px;
-    font-family: 'Nunito', sans-serif;
-    border-radius:12px;
-    padding: 5px;
-    margin: 10px;
-    outline: none;
-}
-
-#select-button{
-    font-size: 35px;
-    padding:5px;
-    background-color:  rgb(61, 61, 63);
-    border-radius:12px;
-    border: 1px solid #f3f8fa;
-    color:#f3f8fa;
-    font-family: 'Nunito', sans-serif;
-    cursor: grabbing;
-    outline: none;
-}
-
-#select-button:hover{
-    color:rgb(61, 61, 63);
-    background-color:#e3e3e7;
-}
-
-#new-game{
-    font-size: 35px;
-    padding:5px;
-  background-color:  rgb(61, 61, 63);
-  border-radius:12px;
-  border: 1px solid #f3f8fa;
-  color:#f3f8fa;
-  font-family: 'Nunito', sans-serif;
-  cursor: grabbing;
+.letter-input {
+  font-size: 40px;
+  font-family: "Nunito", sans-serif;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 10px;
   outline: none;
 }
 
-#new-game:hover{
-    color:rgb(61, 61, 63);
-    background-color:#e3e3e7;
+#select-button {
+  font-size: 35px;
+  padding: 5px;
+  background-color: rgb(61, 61, 63);
+  border-radius: 12px;
+  border: 1px solid #f3f8fa;
+  color: #f3f8fa;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+
+#select-button:hover {
+  color: rgb(61, 61, 63);
+  background-color: #e3e3e7;
+}
+
+#new-game {
+  font-size: 35px;
+  padding: 5px;
+  background-color: rgb(61, 61, 63);
+  border-radius: 12px;
+  border: 1px solid #f3f8fa;
+  color: #f3f8fa;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+
+#new-game:hover {
+  color: rgb(61, 61, 63);
+  background-color: #e3e3e7;
 }
 
 /* #wins{
@@ -79,20 +79,20 @@
     margin-top: 20px;
 
 } */
-
-#letters-guessed{
-    text-align: left;
-    margin-top: 30px;
-    font-size: 45px;
-    font-family: 'Nunito', sans-serif;
-    /* color:#e3e3e7; */
+body {
+  background-image: linear-gradient(to bottom right, #88a3fa, #e7e7e7);
 }
 
-#guesses-left{
-   font-family: 'Nunito', sans-serif;
-    font-size: 24px;
-    /* color:#e3e3e7 */
+#letters-guessed {
+  text-align: left;
+  margin-top: 30px;
+  font-size: 45px;
+  font-family: "Nunito", sans-serif;
+  /* color:#e3e3e7; */
 }
 
-
-
+#guesses-left {
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  /* color:#e3e3e7 */
+}
