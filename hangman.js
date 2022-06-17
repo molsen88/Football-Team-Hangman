@@ -15,7 +15,7 @@ let teams = [
   "West Ham United",
   "Southampton",
   "Brighton",
-  "Wigan",
+  "Wigan Athletic",
   "Crystal Palace",
   "Aston Villa",
   "Leicester City",
@@ -46,7 +46,90 @@ let teams = [
   "Brentford",
   "Bolton",
   "Wycombe",
+  "Salford City",
+  "Nottingham Forest",
+  "Coventry",
+  "Blackpool",
+  "Cardiff City",
+  "Peterborough",
+  "Rotherham",
+  "MK Dons",
+  "Plymouth Argyle",
+  "Sheffield Wednesday",
+  "Oxford United",
+  "Ipswich Town",
+  "Cheltenham",
+  "Cambridge United",
+  "Accrington Stanley",
+  "Shrewsbury",
+  "Burton",
+  "Lincoln City",
+  "Fleetwood",
+  "Gillingham",
+  "Morecambe",
+  "AFC Wimbledon",
+  "Doncaster",
+  "Crewe Alexandra",
+  "Barcelona",
+  "Real Madrid",
+  "Sevilla",
+  "Valencia",
+  "Levante",
+  "Atletico Madrid",
+  "Villareal",
+  "Real Sociedad",
+  "Real Betis",
+  "Atheltic Club",
+  "Osasuna",
+  "Rayo Vallecano",
+  "Getafe",
+  "Elche",
+  "Granada",
+  "Mallorca",
+  "Cadiz",
+  "Alaves",
+  "Celta Vigo",
+  "Espanyol",
+  "FC Bayern Munchen",
+  "RB Leipzig",
+  "Borussia Dortmund",
+  "Hamburg",
+  "Augsburg",
+  "Bayer Leverkusen",
+  "Union Berlin",
+  "FC Koln",
+  "SC Freiburg",
+  "Eintracht Frankfurt",
+  "Mainz",
+  "Monchengladbach",
+  "VfL Bochum",
+  "Wolfsburg",
+  "Hertha Berlin",
+  "Hoffenheim",
+  "Arminia",
+  "Furth",
+  "AC Milan",
+  "Inter Milan",
+  "Juventus",
+  "Atalanta",
+  "Napoli",
+  "Torino",
+  "AS Roma",
+  "Sampdoria",
+  "Bologna",
+  "Fiorentina",
+  "Sassuolo",
+  "Genoa",
+  "Verona",
+  "Empoli",
+  "Cagliari",
+  "Spezia",
+  "Salernitana",
+  "Venezia",
+  "Udinese",
+  "Lazio"
 ];
+// GLOBAL VARIABLES
 let lettersGuessed = [];
 let underscores = [];
 let choiceUnderscore, userInput, inputValue;
@@ -60,127 +143,161 @@ let spaces;
 let correctUnderscores;
 let wins = 0;
 let losses = 0;
+let total;
+let choice;
+let checkAnswer;
 
 startGame = () => {
   guessesLeft;
   lettersGuessed = [];
   correctLetters = [];
   duplicate = [];
-  document.getElementById(
-    "guesses-left"
-  ).innerHTML = `You have ${guessesLeft} guesses left!`;
-  document.getElementById(
-    "letters-guessed"
-  ).innerHTML = `Letters Guessed: ${lettersGuessed} `;
+  document.getElementById("guesses-left").innerHTML = `You have ${guessesLeft} guesses left!`;
+  document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed} `;
   getTeam();
 };
 
 // 1. Get a fruit
 getTeam = () => {
-  let choice = teams[Math.floor(Math.random() * teams.length)];
-  console.log(choice);
-  wordSplit = choice.split("");
-  console.log(wordSplit);
-  document.getElementById("guess-spot").innerHTML = wordSplit;
+  choice = teams[Math.floor( Math.random() * teams.length )];
+  checkAnswer=choice.toLowerCase()
+  console.log( choice );
+  let twoWords = choice.split( ' ' );
+  if ( twoWords.length > 1 ) {
+    
+  }
+  wordSplit = choice.split( "" );
+  let getSpaces = wordSplit;
+
 
   // 2. Loop through each element and replace it with an underscore
 
-  wordSplit.forEach((element) => {
-    let spaces = element.replace(element, "_");
-    underscores.push(spaces);
-    document.getElementById("guess-spot").innerHTML = underscores.join(" ");
-  });
-  console.log(underscores);
+  wordSplit.forEach( ( element ) => {
+    let spaces = element.replace( element, "_" );
+    underscores.push( spaces );
+  } );
+  // console.log( underscores );
+
+  underscores = underscores.map( ( el, index ) => {
+    if ( getSpaces[index] === " " ) {
+     el=" "
+    }
+    return el
+  } )
+  document.getElementById( "guess-spot" ).innerHTML = underscores.join( "" );
+
+  total = underscores.filter( el => {
+    if ( el !== " " ) {
+      return el
+    }
+  } ).length;
 };
 
 // 3. Getting the user input and checking for a correct guess
 getUserInput = () => {
-  // enterKey();
-  //   document.addEventListener("keypress", function (e) {
-  //     let inputValue = document.getElementById("user-input").value;
-  //     if (e.which === 13) {
-  //       console.log(inputValue);
-  //       let manualUpper = inputValue.toLowerCase();
-  //       let manualLower = inputValue.toUpperCase();
-  //       console.log(manualLower, manualUpper);
-  //       document.getElementById("user-input").value = "";
-  //     }
+  let modal = document.querySelector( '.answer-modal' );
+  document.getElementById( 'answer-button' ).addEventListener( 'click', function () {
+   modal.style.display = 'block';
+  } )
 
-  document
-    .getElementById("select-button")
-    .addEventListener("click", function () {
-      let userInput = document.getElementById("user-input").value;
-      console.log(userInput);
+  document.getElementById( 'user-answer-input' ).addEventListener( 'keydown', function (e) {
+    let userAnswerInput = document.getElementById( 'user-answer-input' ).value;
+    if ( e.keyCode === 13 ) {
+      e.preventDefault()
+      console.log(choice)
+      userAnswerInput = userAnswerInput.toLowerCase()
+      if(userAnswerInput!==choice.toLowerCase()) {
+      alert( 'Wrong' )
+      modal.style.display = 'none';
+        guessesLeft -= 1;
+        document.getElementById("guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`;
+    }
+    }
+    if ( userAnswerInput === choice.toLowerCase() ) {
+      alert( 'You Win' )
+      modal.style.display = 'none';
+      document.getElementById( "guess-spot" ).innerHTML = choice;
+    } 
+    
+  } )
+  
+
+
+  
+  document.getElementById( "user-input" ).addEventListener( "keydown", function ( e ) {
+   
+    if ( e.keyCode === 13 ) {
+      e.preventDefault()
+      let userInput = document.getElementById( "user-input" ).value;
       let upper = userInput.toUpperCase();
-      // console.log( upper )
       let lower = userInput.toLowerCase();
-      // console.log( lower )
-      document.getElementById("user-input").value = "";
+      
+  
+      document.getElementById( "user-input" ).value = "";
 
-      lettersGuessed.push(userInput);
+      lettersGuessed.push( userInput );
 
       //loop through an array for duplicates and pop/remove if there's a match
-      for (let j = 0; j <= lettersGuessed.length; j++) {
-        for (let k = j; k <= lettersGuessed.length; k++) {
-          if (j != k && lettersGuessed[j] == lettersGuessed[k]) {
-            console.log("chosen");
+      for ( let j = 0; j <= lettersGuessed.length; j++ ) {
+        for ( let k = j; k <= lettersGuessed.length; k++ ) {
+          if ( j != k && lettersGuessed[ j ] == lettersGuessed[ k ] ) {
             lettersGuessed.pop();
-            alert("letter already chosen");
-            correctLetters.pop(userInput);
+            alert( "letter already chosen" );
+            // correctLetters.pop( userInput );
+            
+
           }
         }
       }
-      document.getElementById(
-        "letters-guessed"
-      ).innerHTML = `Letters Guessed: ${lettersGuessed} `;
+      document.getElementById( "letters-guessed" ).innerHTML = `Letters Guessed: ${lettersGuessed} `;
 
-      for (var i = 0; i < wordSplit.length; i++) {
+      for ( var i = 0; i < wordSplit.length; i++ ) {
         if (
-          userInput === wordSplit[i] ||
-          upper === wordSplit[i] ||
-          lower === wordSplit[i]
+          userInput === wordSplit[ i ] ||
+          upper === wordSplit[ i ] ||
+          lower === wordSplit[ i ]
         ) {
-          correctLetters.push(userInput);
-          // correctLetters.push(inputValue);
-          underscores[i] = wordSplit[i];
-          console.log(underscores);
-          document.getElementById("guess-spot").innerHTML = underscores.join(
-            " "
-          );
-          console.log("you guessed a right letter");
+          correctLetters.push( userInput );
+          underscores[ i ] = wordSplit[ i ];
+          console.log( underscores );
+          let guessSpot=document.getElementById( "guess-spot" )
+          guessSpot.innerHTML = underscores.join( "" ); 
+          // console.log( underscores );
+          
         }
       }
 
-      var wrongChoice = wordSplit.indexOf(userInput);
-      var wrongChoiceTwo = wordSplit.indexOf(inputValue);
-
-      if (wrongChoice === -1 || wrongChoiceTwo === -1) {
+      if ( !checkAnswer.includes(userInput) ) {
         guessesLeft -= 1;
-        document.getElementById(
-          "guesses-left"
-        ).innerHTML = `You have ${guessesLeft} guesses left!`;
+        document.getElementById("guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`;
+      } else {
+        guessesLeft=guessesLeft
       }
 
-      if (guessesLeft === 0) {
-        alert("Game Over!");
-        // losses++;
-        // document.getElementById( 'losses' ).innerHTML = losses;
+      if ( guessesLeft === 0 ) {
+        alert( "Game Over!" );
         location.reload();
       }
 
       //Winning the game
-      if (correctLetters.length === wordSplit.length) {
-        alert("You Win");
+      if ( correctLetters.length === total ) {
+        alert( "You Win" );
         location.reload();
       }
-    });
+
+      
+      guessesLeft=guessesLeft
+    }
+ } );
 };
+
+ 
 
 //Button for those who give up too easily
 newGame = () => {
-  document.getElementById("new-game").addEventListener("click", function () {
+  document.getElementById( "new-game" ).addEventListener( "click", function () {
     location.reload();
-  });
+  } );
 };
 
 startGame();
@@ -192,5 +309,3 @@ newGame();
 // 1. Record wins and losses
 
 // 2. Reset game instead of reload.
-
-// 3. Create a space for two words

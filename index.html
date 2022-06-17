@@ -17,13 +17,20 @@
         <wrapper>
             <div>
                 <input type="text" placeholder="Pick a letter" class="letter-input" id="user-input">
-                <button type="button" id="select-button">Select</button>
-                <button type="button" id="new-game">New Game</button>
+                <button type="button" class="'buttons" id="answer-button">Guess Answer</button>
+                <button type="button"  class="'buttons"id="new-game">New Game</button>
                 <!-- <div id='wins'>Wins:</div>
                 <div id='losses'>Losses:</div> -->
                 <div class='banner'>
                     <div id='letters-guessed'>Letters Guessed:</div>
                     <div id='guesses-left'></div>
+                </div>
+                <div class="answer-modal">
+                    <div class="answer-modal-content">
+                        <h1 class="close">&times;</h1>
+                        <input type="text" class="answer-input" id ='user-answer-input' placeholder="What is your answer?">
+                        <button class="'buttons" id="check">Check</button>
+                    </div>
                 </div>
 
             </div>
