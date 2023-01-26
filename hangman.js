@@ -256,22 +256,48 @@ getUserInput = () => {
 
         document.getElementById("user-input").value = "";
 
-        lettersGuessed.push(userInput);
 
-        //loop through an array for duplicates and pop/remove if there's a match
-        for (let j = 0; j <= lettersGuessed.length; j++) {
-          for (let k = j; k <= lettersGuessed.length; k++) {
-            if (j != k && lettersGuessed[j] == lettersGuessed[k]) {
-              lettersGuessed.pop();
-              alert("letter already chosen");
-              // guessesLeft = guessesLeft;
-              // correctLetters.pop( userInput );
-            }
+        
+
+        if ( !lettersGuessed.includes( userInput ) ) {
+          lettersGuessed.push( userInput );
+          console.log( lettersGuessed )
+          console.log(correctLetters)
+          if ( !checkAnswer.includes( userInput ) ) {
+            console.log( checkAnswer )
+            guessesLeft -= 1;
+            document.getElementById( "guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`
+          } else {
+             
             guessesLeft = guessesLeft;
           }
+        }else {
+            alert("Letter already chosen")
+          }
+        
+        if ( checkAnswer.includes( userInput ) ) {
+          if ( !correctLetters.includes( userInput ) ) {
+            correctLetters.push( userInput )  
+          }
+            
         }
 
-        document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed} `;
+        
+        //loop through an array for duplicates and pop/remove if there's a match
+
+        
+        // for (let j = 0; j <= lettersGuessed.length; j++) {
+        //   for (let k = j; k <= lettersGuessed.length; k++) {
+        //     if (j != k && lettersGuessed[j] == lettersGuessed[k]) {
+              // lettersGuessed.pop();
+              // alert( "letter already chosen" );
+        //       console.log(lettersGuessed)
+        //       correctLetters.pop( userInput );
+        //     }
+        //   }
+        // }
+
+        document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed}`;
 
         for (var i = 0; i < wordSplit.length; i++) {
           if (
@@ -279,20 +305,13 @@ getUserInput = () => {
             upper === wordSplit[i] ||
             lower === wordSplit[i]
           ) {
-            correctLetters.push(userInput);
+            // correctLetters.push(userInput);
             underscores[i] = wordSplit[i];
             console.log(underscores);
             let guessSpot = document.getElementById("guess-spot");
             guessSpot.innerHTML = underscores.join("");
-            // console.log( underscores );
+            console.log( underscores );
           }
-        }
-
-        if (!checkAnswer.includes(userInput)) {
-          guessesLeft -= 1;
-          document.getElementById("guesses-left").innerHTML = `You have ${guessesLeft}`
-        } else {
-          guessesLeft = guessesLeft;
         }
 
         if ( guessesLeft === 0 ) {
@@ -301,7 +320,8 @@ getUserInput = () => {
         }
 
         //Winning the game
-        if (correctLetters.length === total) {
+
+        if (underscores.join('') === choice) {
           alert("You Win");
           location.reload();
         }
