@@ -317,8 +317,11 @@ getUserInput = () => {
         //Winning the game
 
         if (underscores.join('') === choice) {
-          alert("You Win");
-          location.reload();
+          alert( "You Win" );
+      guessSpot.innerHTML = choice;
+          
+          // location.reload();
+          
         }
         guessesLeft = guessesLeft;
       }
@@ -327,7 +330,6 @@ getUserInput = () => {
 
 checkButton = () => {
   let check = document.getElementById( "check" );
-
   check.addEventListener( "click", function () {
     if ( userAnswerInput.value.toLowerCase() === choice.toLowerCase() ) {
       alert( 'good job michael' );
