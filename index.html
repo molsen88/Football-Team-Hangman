@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="hangman.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <title>English Soccer Hangman</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="hangman.css">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        <title>English Soccer Hangman</title>
-
-    </head>
-
-    <body>
-        <div class='title' id='game-title'>
-            <h1>Football Team Hangman</h1>
-        </div>
-        <wrapper>
-            <div>
-                <input type="text" placeholder="Pick a letter" class="letter-input" id="user-input">
-                <button type="button" class="'buttons" id="answer-button">Guess Answer</button>
-                <button type="button"  class="'buttons"id="new-game">New Game</button>
-                <!-- <div id='wins'>Wins:</div>
+  <body>
+    <div class="title" id="game-title">
+      <h1>Football Team Hangman</h1>
+    </div>
+    <wrapper>
+      <div class="game-play-area">
+        <input
+          type="text"
+          placeholder="Pick a letter"
+          class="letter-input"
+          id="user-input"
+        />
+        <button type="button" class="'buttons" id="answer-button">
+          Guess Answer
+        </button>
+        <button type="button" class="'buttons" id="new-game">New Game</button>
+        <!-- <div id='wins'>Wins:</div>
                 <div id='losses'>Losses:</div> -->
-                <div class='banner'>
-                    <div id='letters-guessed'>Letters Guessed:</div>
-                    <div id='guesses-left'></div>
-                </div>
-                <div class="answer-modal">
-                    <div class="answer-modal-content">
-                        <h1 class="close">&times;</h1>
-                        <input type="text" class="answer-input" id ='user-answer-input' placeholder="What is your answer?">
-                        <button class="'buttons" id="check">Check</button>
-                    </div>
-                </div>
+        <div class="banner">
+          <div id="letters-guessed">Letters Guessed:</div>
+          <div id="guesses-left"></div>
+        </div>
+        <div class="answer-modal">
+          <div class="answer-modal-content">
+            <h1 class="close">&times;</h1>
+            <input
+              type="text"
+              class="answer-input"
+              id="user-answer-input"
+              placeholder="What is your answer?"
+            />
+            <button class="'buttons" id="check">Check</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="guessing-area" id="guess-spot"></div>
+      </div>
+    </wrapper>
 
-            </div>
-            <div>
-                <div class='guessing-area' id='guess-spot'></div>
-            </div>
-
-        </wrapper>
-
-
-
-        <script src="hangman.js"></script>
-    </body>
-
+    <script src="hangman.js"></script>
+  </body>
 </html>

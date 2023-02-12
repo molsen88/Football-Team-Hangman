@@ -21,6 +21,11 @@ button:hover {
   font-size: 50px;
   color: rgb(28, 28, 31);
   margin-bottom: 50px;
+  text-align: center;
+}
+
+.game-play-area {
+  text-align: center;
 }
 
 .guessing-area {
@@ -68,7 +73,7 @@ body {
 }
 
 #letters-guessed {
-  text-align: left;
+  text-align: center;
   margin-top: 30px;
   font-size: 45px;
   font-family: "Nunito", sans-serif;
