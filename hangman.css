@@ -30,7 +30,7 @@ button:hover {
 
 .guessing-area {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 60px;
   font-size: 30px;
 }
 
@@ -74,7 +74,7 @@ body {
 
 #letters-guessed {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 45px;
   font-family: "Nunito", sans-serif;
 }
@@ -129,6 +129,32 @@ body {
   body {
     background-image: linear-gradient(to bottom right, #8f8ff8, #eeef77);
   }
+
+  .title {
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    color: rgb(28, 28, 31);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  button {
+    /* position: absolute; */
+    bottom: 0;
+  }
+
+  /* button {
+    font-size: 35px;
+    padding: 5px;
+    background-color: rgb(61, 61, 63);
+    border-radius: 12px;
+    border: 1px solid #f3f8fa;
+    color: #f3f8fa;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+  } */
 }
 
 /* Small screen devices (600px and above) */
