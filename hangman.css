@@ -69,7 +69,7 @@ button:hover {
 }
 
 body {
-  background-image: linear-gradient(to bottom right, #88a3fa, #e7e7e7);
+  background-image: linear-gradient(to bottom right, #82f3fa, #eeef77);
 }
 
 #letters-guessed {
@@ -121,3 +121,24 @@ body {
 .close {
   cursor: pointer;
 }
+
+/* MEDIA QUERY */
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  body {
+    background-image: linear-gradient(to bottom right, #8f8ff8, #eeef77);
+  }
+}
+
+/* Small screen devices (600px and above) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium screen devices (768px and above) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Big screen devices (889px and above) */
+/* @media only screen and (min-width: 889px) {...} */
+
+/* Extra big screen devices (1200px and above) */
+/* @media only screen and (min-width: 1200px) {...} */
