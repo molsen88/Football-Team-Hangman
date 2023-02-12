@@ -222,7 +222,11 @@ getTeam = () => {
 // 3. Getting the user input and checking for a correct guess
 
 getUserInput = () => {
-  let modal = document.querySelector(".answer-modal");
+  let modal = document.querySelector( ".answer-modal" );
+  let close = document.querySelector( ".close" );
+  close.addEventListener( "click", function () {
+    modal.style.display = 'none';
+  })
   document.getElementById("answer-button").addEventListener("click", function () {
       modal.style.display = "block";
     });

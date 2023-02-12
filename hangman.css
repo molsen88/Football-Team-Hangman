@@ -1,20 +1,17 @@
-
-button{
-   font-size: 35px;
-   padding: 5px;
-   background-color: rgb(61, 61, 63);
-   border-radius: 12px;
-   border: 1px solid #f3f8fa;
-   color: #f3f8fa;
-   font-family: "Nunito",
-   sans-serif;
-   cursor: pointer;
-   outline: none;
-   transition: 0.5s;
+button {
+  font-size: 35px;
+  padding: 5px;
+  background-color: rgb(61, 61, 63);
+  border-radius: 12px;
+  border: 1px solid #f3f8fa;
+  color: #f3f8fa;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
 }
 
-button:hover{
-
+button:hover {
   color: rgb(61, 61, 63);
   background-color: #e3e3e7;
 }
@@ -68,8 +65,6 @@ button:hover{
 
 body {
   background-image: linear-gradient(to bottom right, #88a3fa, #e7e7e7);
-  
-
 }
 
 #letters-guessed {
@@ -84,8 +79,8 @@ body {
   font-size: 24px;
 }
 
-.answer-modal{
-  display:none;
+.answer-modal {
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -97,7 +92,7 @@ body {
   background-color: rgb(0, 0, 0.9, 0.9);
 }
 
-.answer-modal-content{
+.answer-modal-content {
   text-align: center;
   background-color: white;
   margin: 15% auto;
@@ -106,15 +101,18 @@ body {
   width: 50%;
 }
 
-.answer-input{
-  font-family: "Nunito",
-  sans-serif;
-font-size: 40px;
- /* border-radius: 12px; */
- padding: 5px;
- margin: 10px;
- outline: none;
- border-top: none;
- border-left: none;
- border-right: none;
+.answer-input {
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  /* border-radius: 12px; */
+  padding: 5px;
+  margin: 10px;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.close {
+  cursor: pointer;
 }
