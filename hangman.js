@@ -175,6 +175,12 @@ let losses = 0;
 let total;
 let choice;
 let checkAnswer;
+let userAnswerInput = document.getElementById( "user-answer-input" );
+let modal = document.querySelector( ".answer-modal" );
+let close = document.querySelector( ".close" );
+let guessSpot = document.getElementById("guess-spot");
+
+
 
 startGame = () => {
   guessesLeft;
@@ -221,6 +227,8 @@ getTeam = () => {
 
 // 3. Getting the user input and checking for a correct guess
 
+
+
 getUserInput = () => {
   let modal = document.querySelector( ".answer-modal" );
   let close = document.querySelector( ".close" );
@@ -229,14 +237,14 @@ getUserInput = () => {
   })
   document.getElementById("answer-button").addEventListener("click", function () {
       modal.style.display = "block";
-    });
-
+  } );
+  
   document.getElementById("user-answer-input").addEventListener("keydown", function (e) {
-      let userAnswerInput = document.getElementById("user-answer-input").value;
+       userAnswerInput.value;
       if (e.keyCode === 13) {
         e.preventDefault();
         console.log(choice);
-        userAnswerInput = userAnswerInput.toLowerCase();
+        userAnswerInput = userAnswerInput.value.toLowerCase();
         if (userAnswerInput !== choice.toLowerCase()) {
           alert("Wrong");
           modal.style.display = "none";
@@ -254,14 +262,12 @@ getUserInput = () => {
   document.getElementById("user-input").addEventListener("keydown", function (e) {
       if (e.keyCode === 13) {
         e.preventDefault();
-        let userInput = document.getElementById("user-input").value;
+        let userInput = document.getElementById( "user-input" ).value;
         let upper = userInput.toUpperCase();
         let lower = userInput.toLowerCase();
 
         document.getElementById("user-input").value = "";
 
-
-        
 
         if ( !lettersGuessed.includes( userInput ) ) {
           lettersGuessed.push( userInput );
@@ -286,22 +292,7 @@ getUserInput = () => {
             
         }
 
-        
-        //loop through an array for duplicates and pop/remove if there's a match
-
-        
-        // for (let j = 0; j <= lettersGuessed.length; j++) {
-        //   for (let k = j; k <= lettersGuessed.length; k++) {
-        //     if (j != k && lettersGuessed[j] == lettersGuessed[k]) {
-              // lettersGuessed.pop();
-              // alert( "letter already chosen" );
-        //       console.log(lettersGuessed)
-        //       correctLetters.pop( userInput );
-        //     }
-        //   }
-        // }
-
-        document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed}`;
+      document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed}`;
 
         for (var i = 0; i < wordSplit.length; i++) {
           if (
@@ -312,7 +303,7 @@ getUserInput = () => {
             // correctLetters.push(userInput);
             underscores[i] = wordSplit[i];
             console.log(underscores);
-            let guessSpot = document.getElementById("guess-spot");
+            // let guessSpot = document.getElementById("guess-spot");
             guessSpot.innerHTML = underscores.join("");
             console.log( underscores );
           }
@@ -329,11 +320,24 @@ getUserInput = () => {
           alert("You Win");
           location.reload();
         }
-
         guessesLeft = guessesLeft;
       }
     });
 };
+
+checkButton = () => {
+  let check = document.getElementById( "check" );
+
+  check.addEventListener( "click", function () {
+    if ( userAnswerInput.value.toLowerCase() === choice.toLowerCase() ) {
+      alert( 'good job michael' );
+      modal.style.display = 'none';
+      guessSpot.innerHTML = choice;
+    } else {
+      alert('try again')
+}
+  })
+}
 
 //Button for those who give up too easily
 newGame = () => {
@@ -343,6 +347,7 @@ newGame = () => {
 };
 
 startGame();
+checkButton();
 getUserInput();
 newGame();
 
