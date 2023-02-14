@@ -1,7 +1,7 @@
-button {
+.buttons {
   font-size: 35px;
   padding: 5px;
-  background-color: rgb(61, 61, 63);
+  background-color: #333333;
   border-radius: 12px;
   border: 1px solid #f3f8fa;
   color: #f3f8fa;
@@ -11,15 +11,16 @@ button {
   transition: 0.5s;
 }
 
-button:hover {
-  color: rgb(61, 61, 63);
-  background-color: #e3e3e7;
+.buttons:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #000000;
 }
 
 .title {
   font-family: "Nunito", sans-serif;
   font-size: 50px;
-  color: rgb(28, 28, 31);
+  color: #ffffff;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -50,7 +51,7 @@ button:hover {
   outline: none;
 }
 
-#new-game {
+/* #new-game {
   font-size: 35px;
   padding: 5px;
   background-color: rgb(61, 61, 63);
@@ -61,15 +62,16 @@ button:hover {
   cursor: pointer;
   outline: none;
   transition: 0.5s;
-}
+} */
 
-#new-game:hover {
+/* #new-game:hover {
   color: rgb(61, 61, 63);
-  background-color: #e3e3e7;
-}
+  background-color: #ffffff;
+} */
 
 body {
-  background-image: linear-gradient(to bottom right, #82f3fa, #eeef77);
+  /* background-image: linear-gradient(to bottom right, #82f3fa, #eeef77); */
+  background-image: linear-gradient(to bottom right, #000000, #ffffff);
 }
 
 #letters-guessed {

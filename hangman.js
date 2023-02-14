@@ -243,13 +243,14 @@ getUserInput = () => {
        userAnswerInput.value;
       if (e.keyCode === 13) {
         e.preventDefault();
-        console.log(choice);
         userAnswerInput = userAnswerInput.value.toLowerCase();
+        console.log( userAnswerInput );
         if (userAnswerInput !== choice.toLowerCase()) {
           alert("Wrong");
           modal.style.display = "none";
           guessesLeft -= 1;
-          document.getElementById("guesses-left").innerHTML = `You have ${guessesLeft} guesses left!`;
+          document.getElementById( "guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`;
+          userAnswerInput = document.getElementById( "user-answer-input" );
         }
       }
       if (userAnswerInput === choice.toLowerCase()) {
@@ -288,8 +289,7 @@ getUserInput = () => {
         if ( checkAnswer.includes( userInput ) ) {
           if ( !correctLetters.includes( userInput ) ) {
             correctLetters.push( userInput )  
-          }
-            
+          }   
         }
 
       document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed}`;
@@ -318,10 +318,7 @@ getUserInput = () => {
 
         if (underscores.join('') === choice) {
           alert( "You Win" );
-      guessSpot.innerHTML = choice;
-          
-          // location.reload();
-          
+          guessSpot.innerHTML = choice;        
         }
         guessesLeft = guessesLeft;
       }
@@ -336,9 +333,10 @@ checkButton = () => {
       modal.style.display = 'none';
       guessSpot.innerHTML = choice;
     } else {
-      alert('try again')
-}
-  })
+      alert( 'try again' );
+      userAnswerInput.value = "";
+    }
+  } )
 }
 
 //Button for those who give up too easily
@@ -358,3 +356,5 @@ newGame();
 // 1. Record wins and losses
 
 // 2. Reset game instead of reload.
+
+// 3. modal to display win/loss
