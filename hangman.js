@@ -269,17 +269,24 @@ getUserInput = () => {
       if (e.keyCode === 13) {
         e.preventDefault();
         let userInput = document.getElementById( "user-input" ).value;
-        console.log(userInput)
+        console.log( userInput )
+        let regex = /[a-zA-Z]/;
+        
+        
         let upper = userInput.toUpperCase();
         let lower = userInput.toLowerCase();
-
+        
+        
         document.getElementById("user-input").value = "";
 
 
-        if ( !lettersGuessed.includes( userInput )&&!lettersGuessed.includes(userInput.toLowerCase()) ) {
+        if ( !lettersGuessed.includes( userInput ) &&
+          !lettersGuessed.includes( userInput.toLowerCase() ) &&
+          userInput.length < 2 &&
+          userInput.match( regex ) ) {
+          
           lettersGuessed.push( userInput );
-          console.log( lettersGuessed )
-          console.log(correctLetters)
+          
           if ( !checkAnswer.includes( userInput ) ) {
             console.log( checkAnswer )
             guessesLeft -= 1;
@@ -296,22 +303,16 @@ getUserInput = () => {
             correctLetters.push( userInput )  
           }   
         }
-
+      
         // 7. Display letters that have been guessed
 
       document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed}`;
 
         for (var i = 0; i < wordSplit.length; i++) {
-          if (
-            userInput === wordSplit[i] ||
-            upper === wordSplit[i] ||
-            lower === wordSplit[i]
-          ) {
-            
+          if (userInput === wordSplit[i] ||upper === wordSplit[i] ||lower === wordSplit[i]) {
             underscores[i] = wordSplit[i];
-            console.log(underscores);
+            // console.log(underscores);
             guessSpot.innerHTML = underscores.join("");
-            console.log( underscores );
           }
         }
 
