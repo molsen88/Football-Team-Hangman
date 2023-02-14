@@ -264,13 +264,14 @@ getUserInput = () => {
       if (e.keyCode === 13) {
         e.preventDefault();
         let userInput = document.getElementById( "user-input" ).value;
+        console.log(userInput)
         let upper = userInput.toUpperCase();
         let lower = userInput.toLowerCase();
 
         document.getElementById("user-input").value = "";
 
 
-        if ( !lettersGuessed.includes( userInput ) ) {
+        if ( !lettersGuessed.includes( userInput )&&!lettersGuessed.includes(userInput.toLowerCase()) ) {
           lettersGuessed.push( userInput );
           console.log( lettersGuessed )
           console.log(correctLetters)
@@ -279,7 +280,6 @@ getUserInput = () => {
             guessesLeft -= 1;
             document.getElementById( "guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`
           } else {
-             
             guessesLeft = guessesLeft;
           }
         }else {
