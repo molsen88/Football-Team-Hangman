@@ -192,7 +192,8 @@ startGame = () => {
   getTeam();
 };
 
-// 1. Get a team
+// 1. Get a team function
+
 getTeam = () => {
   choice = teams[Math.floor(Math.random() * teams.length)];
   checkAnswer = choice.toLowerCase();
@@ -209,14 +210,16 @@ getTeam = () => {
     let spaces = element.replace(element, "_");
     underscores.push(spaces);
   });
-  // console.log( underscores );
 
   underscores = underscores.map((el, index) => {
     if (getSpaces[index] === " ") {
       el = " ";
     }
     return el;
-  });
+  } );
+  
+  // 3. Display underscores on page
+
   document.getElementById("guess-spot").innerHTML = underscores.join("");
 
   total = underscores.filter((el) => {
@@ -225,9 +228,7 @@ getTeam = () => {
     }}).length;
 };
 
-// 3. Getting the user input and checking for a correct guess
-
-
+// 4. Getting the user inputs and checking for a correct guess
 
 getUserInput = () => {
   let modal = document.querySelector( ".answer-modal" );
@@ -239,6 +240,8 @@ getUserInput = () => {
       modal.style.display = "block";
   } );
   
+  // 5. Guess complete answer modal user input
+
   document.getElementById("user-answer-input").addEventListener("keydown", function (e) {
        userAnswerInput.value;
       if (e.keyCode === 13) {
@@ -259,6 +262,8 @@ getUserInput = () => {
         document.getElementById("guess-spot").innerHTML = choice;
       }
     });
+
+  // 6. Get only letter input
 
   document.getElementById("user-input").addEventListener("keydown", function (e) {
       if (e.keyCode === 13) {
@@ -292,6 +297,8 @@ getUserInput = () => {
           }   
         }
 
+        // 7. Display letters that have been guessed
+
       document.getElementById("letters-guessed").innerHTML = `Letters Guessed: ${lettersGuessed}`;
 
         for (var i = 0; i < wordSplit.length; i++) {
@@ -300,21 +307,23 @@ getUserInput = () => {
             upper === wordSplit[i] ||
             lower === wordSplit[i]
           ) {
-            // correctLetters.push(userInput);
+            
             underscores[i] = wordSplit[i];
             console.log(underscores);
-            // let guessSpot = document.getElementById("guess-spot");
             guessSpot.innerHTML = underscores.join("");
             console.log( underscores );
           }
         }
 
+        // 8. Lose game with no guesses remaining
+        
         if ( guessesLeft === 0 ) {
           alert( "Game Over!" );
-          location.reload();
+          document.getElementById("guess-spot").innerHTML = choice;
+          // location.reload();
         }
 
-        //Winning the game
+        // 9. Winning the game
 
         if (underscores.join('') === choice) {
           alert( "You Win" );
@@ -324,6 +333,8 @@ getUserInput = () => {
       }
     });
 };
+
+// 10. Check button on user answer input 
 
 checkButton = () => {
   let check = document.getElementById( "check" );
@@ -339,12 +350,15 @@ checkButton = () => {
   } )
 }
 
-//Button for those who give up too easily
+// 11. Button for those who give up too easily
+
 newGame = () => {
   document.getElementById("new-game").addEventListener("click", function () {
     location.reload();
   });
 };
+
+// FUNCTIONS 
 
 startGame();
 checkButton();
