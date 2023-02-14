@@ -1,20 +1,29 @@
 .buttons {
   font-size: 35px;
-  padding: 5px;
+  padding: 7px;
   background-color: #333333;
-  border-radius: 12px;
+  border-radius: 38px;
   border: 1px solid #f3f8fa;
   color: #f3f8fa;
   font-family: "Nunito", sans-serif;
   cursor: pointer;
   outline: none;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .buttons:hover {
-  color: #000000;
+  color: #333333;
   background-color: #ffffff;
-  border: 2px solid #000000;
+  border: 3px solid #333333;
+}
+
+#check {
+  background-color: #333333;
+}
+
+#check:hover {
+  background-color: #f3f8fa;
+  border: #333333 solid 4px;
 }
 
 .title {
@@ -23,6 +32,7 @@
   color: #ffffff;
   margin-bottom: 50px;
   text-align: center;
+  text-decoration: underline;
 }
 
 .game-play-area {
@@ -45,29 +55,11 @@
 .letter-input {
   font-size: 40px;
   font-family: "Nunito", sans-serif;
-  border-radius: 12px;
-  padding: 5px;
-  margin: 10px;
+  border-radius: 38px;
+  padding: 7px;
+  margin: 5px;
   outline: none;
 }
-
-/* #new-game {
-  font-size: 35px;
-  padding: 5px;
-  background-color: rgb(61, 61, 63);
-  border-radius: 12px;
-  border: 1px solid #f3f8fa;
-  color: #f3f8fa;
-  font-family: "Nunito", sans-serif;
-  cursor: pointer;
-  outline: none;
-  transition: 0.5s;
-} */
-
-/* #new-game:hover {
-  color: rgb(61, 61, 63);
-  background-color: #ffffff;
-} */
 
 body {
   /* background-image: linear-gradient(to bottom right, #82f3fa, #eeef77); */
