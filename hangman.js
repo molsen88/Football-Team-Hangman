@@ -1,7 +1,7 @@
 //Declared variables
 
 let teams = [
-  "Liverpool",
+  "Liverpool FC",
   "Manchester City",
   "Tottenham",
   "Chelsea",
@@ -268,7 +268,7 @@ getUserInput = () => {
   document.getElementById("user-input").addEventListener("keydown", function (e) {
       if (e.keyCode === 13) {
         e.preventDefault();
-        let userInput = document.getElementById( "user-input" ).value;
+        let userInput = document.getElementById( "user-input" ).value.toLowerCase();
         console.log( userInput )
         let regex = /[a-zA-Z]/;
         
@@ -276,7 +276,9 @@ getUserInput = () => {
         let upper = userInput.toUpperCase();
         let lower = userInput.toLowerCase();
         
-        
+        if(!userInput.match(regex)){
+          alert('Pick a letter')
+        }
         document.getElementById("user-input").value = "";
 
 
@@ -294,7 +296,7 @@ getUserInput = () => {
           } else {
             guessesLeft = guessesLeft;
           }
-        }else {
+        }else  if(userInput.match(regex)){
             alert("Letter already chosen")
           }
         
@@ -347,6 +349,7 @@ checkButton = () => {
     } else {
       alert( 'try again' );
       userAnswerInput.value = "";
+      guessesLeft-=1;
     }
   } )
 }
