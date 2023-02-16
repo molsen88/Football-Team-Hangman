@@ -157,6 +157,25 @@ let teams = [
   "Inter Miami CF",
   "LA Galaxy",
   "St. Louis City SC",
+  "Club America",
+  "CD Guadaljara",
+  "Tigres",
+  "Cruz Azul",
+  "CF Monterrey",
+  "CF Pachuca",
+  "Club Nexaca",
+  "Atlas FC",
+  "Club Universidad Nacional",
+  "Pumas UNAM",
+  "Deportivo Toluca FC",
+  "Santos Laguna",
+  "Club Leon",
+  "Club Puebla",
+  "FC Juarez",
+  "Club Tijuana",
+  "Mazatlan FC",
+  "Queretaro FC",
+  "Atletico de San Luis"
 ];
 // GLOBAL VARIABLES
 let lettersGuessed = [];
