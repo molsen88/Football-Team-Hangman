@@ -197,7 +197,7 @@ let checkAnswer;
 let userAnswerInput = document.getElementById( "user-answer-input" );
 let modal = document.querySelector( ".answer-modal" );
 let close = document.querySelector( ".close" );
-let guessSpot = document.getElementById("guess-spot");
+let guessSpot = document.getElementById("answer-spot");
 
 
 
@@ -239,7 +239,7 @@ getTeam = () => {
   
   // 3. Display underscores on page
 
-  document.getElementById("guess-spot").innerHTML = underscores.join("");
+  document.getElementById("answer-spot").innerHTML = underscores.join("");
 
   total = underscores.filter((el) => {
     if (el !== " ") {
@@ -276,9 +276,10 @@ getUserInput = () => {
         }
       }
       if (userAnswerInput === choice.toLowerCase()) {
-        alert("You Win");
+        alert( "You Win" );
+          document.getElementById( "guesses-left" ).innerHTML = `Great Job! Play again!`;
         modal.style.display = "none";
-        document.getElementById("guess-spot").innerHTML = choice;
+        document.getElementById("answer-spot").innerHTML = choice;
       }
     });
 
@@ -341,7 +342,7 @@ getUserInput = () => {
         
         if ( guessesLeft === 0 ) {
           alert( "Game Over!" );
-          document.getElementById("guess-spot").innerHTML = choice;
+          document.getElementById("answer-spot").innerHTML = choice;
           // location.reload();
         }
 
@@ -349,7 +350,9 @@ getUserInput = () => {
 
         if (underscores.join('') === choice) {
           alert( "You Win" );
-          guessSpot.innerHTML = choice;        
+          guessSpot.innerHTML = choice; 
+          document.getElementById( "guesses-left" ).innerHTML = `Great Job! Play again!`;
+          
         }
         guessesLeft = guessesLeft;
       }

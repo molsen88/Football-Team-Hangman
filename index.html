@@ -17,24 +17,26 @@
     </div>
     <wrapper>
       <div class="game-play-area">
-        <input
-          type="text"
-          placeholder="Pick a letter"
-          class="letter-input"
-          id="user-input"
-        />
-        <!-- <div class="button-container"> -->
-        <button type="button" class="buttons" id="answer-button">
-          Guess Answer
-        </button>
-        <button type="button" class="buttons" id="new-game">New Game</button>
-        <!-- </div> -->
-        <!-- <button type="button" class="'buttons" id="answer-button">
+        <div class="guess-area">
+          <input
+            type="text"
+            placeholder="Pick a letter"
+            class="letter-input"
+            id="user-input"
+          />
+          <!-- <div class="button-container"> -->
+          <button type="button" class="buttons" id="answer-button">
+            Guess Answer
+          </button>
+          <button type="button" class="buttons" id="new-game">New Game</button>
+          <!-- </div> -->
+          <!-- <button type="button" class="'buttons" id="answer-button">
           Guess Answer
         </button>
         <button type="button" class="'buttons" id="new-game">New Game</button> -->
-        <!-- <div id='wins'>Wins:</div>
+          <!-- <div id='wins'>Wins:</div>
                 <div id='losses'>Losses:</div> -->
+        </div>
         <div class="banner">
           <div id="letters-guessed">Letters Guessed:</div>
           <div id="guesses-left"></div>
@@ -53,7 +55,7 @@
         </div>
       </div>
       <div>
-        <div class="guessing-area" id="guess-spot"></div>
+        <div class="answer-display" id="answer-spot"></div>
       </div>
     </wrapper>
 

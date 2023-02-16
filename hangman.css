@@ -39,13 +39,13 @@
   text-align: center;
 }
 
-.guessing-area {
+.answer-display {
   text-align: center;
   margin-top: 60px;
   font-size: 30px;
 }
 
-#guess-spot {
+#answer-spot {
   font-family: "Nunito", sans-serif;
   font-size: 90px;
   color: rgb(61, 61, 63);
@@ -69,13 +69,14 @@ body {
 #letters-guessed {
   text-align: center;
   margin-top: 15px;
-  font-size: 45px;
+  font-size: 35px;
   font-family: "Nunito", sans-serif;
 }
 
 #guesses-left {
   font-family: "Nunito", sans-serif;
-  font-size: 24px;
+  font-size: 45px;
+  color: #ffffff;
 }
 
 .answer-modal {
@@ -132,9 +133,48 @@ body {
     text-align: center;
   }
 
-  button {
-    /* position: absolute; */
-    bottom: 0;
+  .letter-input {
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 38px;
+    padding: 7px;
+    margin: 5px;
+    outline: none;
+  }
+
+  .buttons {
+    font-size: 15px;
+    padding: 7px;
+    background-color: #333333;
+    border-radius: 38px;
+    border: 1px solid #f3f8fa;
+    color: #f3f8fa;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+    position: relative;
+    bottom: 0px;
+  }
+
+  #letters-guessed {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  #guesses-left {
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  #answer-spot {
+    font-family: "Nunito", sans-serif;
+    font-size: 35px;
+    color: rgb(61, 61, 63);
+    /* margin-bottom: 60px; */
   }
 
   /* button {
