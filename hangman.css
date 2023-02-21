@@ -1,7 +1,12 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Anton&family=Train+One&display=swap");
+ */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Oxygen:wght@700&family=Train+One&display=swap");
+
 body {
   /* background-image: linear-gradient(to bottom right, #82f3fa, #eeef77); */
   /* background-image: linear-gradient(to bottom right, #000000, #ffffff); */
-  background: url("pexels-tom-fisk-3441727.jpg") no-repeat center center fixed;
+  background: url("pexels-markus-spiske-114296.jpg") no-repeat center center
+    fixed;
   font-family: "Nunito", sans-serif;
 }
 
@@ -33,12 +38,15 @@ body {
 }
 
 .title {
-  font-size: 50px;
-  /* color: #ffffff; */
-  color: #ffd433;
+  font-size: 55px;
+  /* color: #0f0f0f; */
+  color: #af756f;
   margin-bottom: 50px;
   text-align: center;
   text-decoration: underline;
+  /* font-family: "Anton", sans-serif; */
+  font-family: "Oxygen", sans-serif;
+  /* background-color: #333333; */
 }
 
 .game-play-area {
@@ -52,10 +60,9 @@ body {
 }
 
 #answer-spot {
-  font-size: 90px;
-  /* color: rgb(61, 61, 63); */
+  font-size: 110px;
   color: #ffffff;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .letter-input {
@@ -122,7 +129,10 @@ body {
 @media only screen and (max-width: 595px) {
   body {
     /* background-image: linear-gradient(to bottom right, #8f8ff8, #eeef77); */
-    background-image: linear-gradient(to bottom right, #000000, #ffffff);
+    /* background-image: linear-gradient(to bottom right, #000000, #ffffff); */
+    background: url("pexels-johannes-plenio-1103969.jpg") no-repeat center
+      center fixed;
+
     font-family: "Nunito", sans-serif;
     overflow: hidden;
   }
