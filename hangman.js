@@ -274,13 +274,17 @@ getUserInput = () => {
           guessesLeft -= 1;
           document.getElementById( "guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`;
           userAnswerInput = document.getElementById( "user-answer-input" );
+          letterInput.style.display = 'none';
+
         }
       }
       if (userAnswerInput === choice.toLowerCase()) {
         alert( "You Win" );
-          document.getElementById( "guesses-left" ).innerHTML = `Great Job! Play again!`;
+        document.getElementById( "guesses-left" ).innerHTML = `Great Job! Play again!`;
         modal.style.display = "none";
-        document.getElementById("answer-spot").innerHTML = choice;
+        document.getElementById( "answer-spot" ).innerHTML = choice;
+        letterInput.style.display = 'none';
+        
       }
     });
 
@@ -343,7 +347,9 @@ getUserInput = () => {
         
         if ( guessesLeft === 0 ) {
           alert( "Game Over!" );
-          document.getElementById("answer-spot").innerHTML = choice;
+          document.getElementById( "answer-spot" ).innerHTML = choice;
+          letterInput.style.display = 'none';
+          
           // location.reload();
         }
 
@@ -367,12 +373,24 @@ checkButton = () => {
   let check = document.getElementById( "check" );
   check.addEventListener( "click", function () {
     if ( userAnswerInput.value.toLowerCase() === choice.toLowerCase() ) {
+      alert('You win')
       modal.style.display = 'none';
       guessSpot.innerHTML = choice;
+      letterInput.style.display = 'none';
+       document.getElementById( "guesses-left" ).innerHTML = `Great Job! Play again!`;
+
+
     } else {
       alert( 'try again' );
+      modal.style.display = 'none';
       userAnswerInput.value = "";
-      guessesLeft-=1;
+      guessesLeft -= 1;
+      document.getElementById( "guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`
+      if ( guessesLeft === 0 ) {
+      alert( 'you lose modal' );
+      document.getElementById( "answer-spot" ).innerHTML = choice;
+      letterInput.style.display = 'none';
+      }
     }
   } )
 }
