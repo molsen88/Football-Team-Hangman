@@ -197,7 +197,8 @@ let checkAnswer;
 let userAnswerInput = document.getElementById( "user-answer-input" );
 let modal = document.querySelector( ".answer-modal" );
 let close = document.querySelector( ".close" );
-let guessSpot = document.getElementById("answer-spot");
+let guessSpot = document.getElementById( "answer-spot" );
+let letterInput = document.getElementById( 'user-input' );
 
 
 
@@ -352,6 +353,7 @@ getUserInput = () => {
           alert( "You Win" );
           guessSpot.innerHTML = choice; 
           document.getElementById( "guesses-left" ).innerHTML = `Great Job! Play again!`;
+          letterInput.style.display = 'none';
           
         }
         guessesLeft = guessesLeft;
@@ -365,7 +367,6 @@ checkButton = () => {
   let check = document.getElementById( "check" );
   check.addEventListener( "click", function () {
     if ( userAnswerInput.value.toLowerCase() === choice.toLowerCase() ) {
-      alert( 'good job michael' );
       modal.style.display = 'none';
       guessSpot.innerHTML = choice;
     } else {
@@ -393,8 +394,8 @@ newGame();
 
 //TO DO
 
-// 1. Record wins and losses
+// 1. Record wins and losses (modal?)
 
 // 2. Reset game instead of reload.
 
-// 3. modal to display win/loss
+

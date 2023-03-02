@@ -188,7 +188,8 @@ body {
 
   #answer-spot {
     font-size: 35px;
-    color: rgb(61, 61, 63);
+    /* color: rgb(61, 61, 63); */
+    color: #f3f8fa;
     /* margin-bottom: 60px; */
   }
 
