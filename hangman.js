@@ -192,6 +192,12 @@ let teams = [
   "Botafogo",
   "Santos FC",
   "Sao Paulo",
+  "Boca Juniors",
+  "Estudiantes",
+  "Newells Old Boys",
+  "Independiente",
+  "Racing Club",
+  "River Plate"
 ];
 // GLOBAL VARIABLES
 let lettersGuessed = [];
