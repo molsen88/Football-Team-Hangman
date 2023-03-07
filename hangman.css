@@ -141,7 +141,9 @@ body {
 
   .title {
     font-size: 28px;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #af756f;
+
     margin-bottom: 50px;
     text-align: center;
   }
