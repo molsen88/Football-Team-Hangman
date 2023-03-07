@@ -130,22 +130,24 @@ body {
   body {
     /* background-image: linear-gradient(to bottom right, #8f8ff8, #eeef77); */
     /* background-image: linear-gradient(to bottom right, #000000, #ffffff); */
-    background: url("pexels-johannes-plenio-1103969.jpg") no-repeat center
-      center fixed;
+    /* background: url("pexels-johannes-plenio-1103969.jpg") no-repeat center
+      center fixed; */
+    background: url("pexels-markus-spiske-114296.jpg") no-repeat center center
+      fixed;
 
     font-family: "Nunito", sans-serif;
     overflow: hidden;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 28px;
     color: #ffffff;
     margin-bottom: 50px;
     text-align: center;
   }
 
   .letter-input {
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 8px;
     /* padding: 7px; */
     margin: 5px;
@@ -154,7 +156,7 @@ body {
   }
 
   .buttons {
-    font-size: 15px;
+    font-size: 20px;
     padding: 7px;
     width: 60%;
     background-color: #333333;
