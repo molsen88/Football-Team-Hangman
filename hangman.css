@@ -13,7 +13,8 @@ body {
 .buttons {
   font-size: 40px;
   padding: 7px;
-  background-color: #333333;
+  /* background-color: #333333; */
+  background-color: #af756f;
   border-radius: 8px;
   border: 1px solid #f3f8fa;
   color: #f3f8fa;
@@ -24,13 +25,13 @@ body {
 }
 
 .buttons:hover {
-  color: #333333;
+  color: #af756f;
   background-color: #ffffff;
-  border: 3px solid #333333;
+  border: 1px solid #af756f;
 }
 
 #check {
-  background-color: #333333;
+  background-color: #af756f;
 }
 
 #check:hover {
@@ -42,7 +43,8 @@ body {
   font-size: 55px;
   /* color: #0f0f0f; */
   color: #af756f;
-  margin-bottom: 50px;
+  text-shadow: #f3f8fa;
+  margin-bottom: 30px;
   text-align: center;
   text-decoration: underline;
   /* font-family: "Anton", sans-serif; */
@@ -58,7 +60,7 @@ body {
 
 .answer-display {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 40px;
   font-size: 30px;
 }
 
@@ -146,10 +148,8 @@ body {
 
   .title {
     font-size: 28px;
-    /* color: #ffffff; */
     color: #af756f;
-
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
   }
 
@@ -166,7 +166,7 @@ body {
     font-size: 20px;
     padding: 7px;
     width: 60%;
-    background-color: #333333;
+    background-color: #af756f;
     border-radius: 8px;
     border: 1px solid #f3f8fa;
     color: #f3f8fa;
@@ -179,7 +179,7 @@ body {
   }
 
   .buttons:hover {
-    color: #333333;
+    color: #af756f;
     background-color: #ffffff;
     border: 3px solid #333333;
   }
