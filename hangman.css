@@ -142,7 +142,7 @@ body {
   }
 
   .letter-input {
-    font-size: 20px;
+    font-size: 10px;
     border-radius: 8px;
     margin: 5px;
     outline: none;
@@ -150,8 +150,8 @@ body {
   }
 
   .buttons {
-    font-size: 20px;
-    padding: 7px;
+    font-size: 10px;
+    padding: 2px;
     width: 60%;
     background-color: #af756f;
     border-radius: 8px;
