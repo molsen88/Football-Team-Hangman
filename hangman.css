@@ -13,7 +13,6 @@ body {
 .buttons {
   font-size: 40px;
   padding: 7px;
-  /* background-color: #333333; */
   background-color: #af756f;
   border-radius: 8px;
   border: 1px solid #f3f8fa;
@@ -41,17 +40,13 @@ body {
 
 .title {
   font-size: 55px;
-  /* color: #0f0f0f; */
   color: #af756f;
+  text-shadow: 4px 4px 8px #333333;
   text-shadow: #f3f8fa;
   margin-bottom: 30px;
   text-align: center;
   text-decoration: underline;
-  /* font-family: "Anton", sans-serif; */
-  /* font-family: "Oxygen", sans-serif; */
   font-family: "Nunito", sans-serif;
-
-  /* background-color: #333333; */
 }
 
 .game-play-area {
@@ -72,7 +67,6 @@ body {
 
 .letter-input {
   font-size: 40px;
-  /* height: 55px; */
   border-radius: 8px;
   padding: 7px;
   margin: 5px;
@@ -116,7 +110,6 @@ body {
 
 .answer-input {
   font-size: 40px;
-  /* border-radius: 12px; */
   padding: 5px;
   margin: 10px;
   outline: none;
@@ -135,13 +128,8 @@ body {
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
   body {
-    /* background-image: linear-gradient(to bottom right, #8f8ff8, #eeef77); */
-    /* background-image: linear-gradient(to bottom right, #000000, #ffffff); */
-    /* background: url("pexels-johannes-plenio-1103969.jpg") no-repeat center
-      center fixed; */
     background: url("pexels-markus-spiske-114296.jpg") no-repeat center center
       fixed;
-
     font-family: "Nunito", sans-serif;
     overflow: hidden;
   }
@@ -156,7 +144,6 @@ body {
   .letter-input {
     font-size: 20px;
     border-radius: 8px;
-    /* padding: 7px; */
     margin: 5px;
     outline: none;
     width: 65%;
@@ -173,9 +160,6 @@ body {
     cursor: pointer;
     outline: none;
     transition: 0.2s;
-    /* position: relative;
-    bottom: 0px; */
-    /* display: none; */
   }
 
   .buttons:hover {
@@ -197,14 +181,11 @@ body {
 
   #answer-spot {
     font-size: 35px;
-    /* color: rgb(61, 61, 63); */
     color: #f3f8fa;
-    /* margin-bottom: 60px; */
   }
 
   .answer-input {
     font-size: 10px;
-    /* border-radius: 12px; */
     padding: 5px;
     margin: 10px;
     outline: none;
@@ -212,24 +193,6 @@ body {
     border-left: none;
     border-right: none;
   }
-
-  /* .guess-area {
-    position: relative;
-    bottom: 0;
-  } */
-
-  /* button {
-    font-size: 35px;
-    padding: 5px;
-    background-color: rgb(61, 61, 63);
-    border-radius: 12px;
-    border: 1px solid #f3f8fa;
-    color: #f3f8fa;
-    font-family: "Nunito", sans-serif;
-    cursor: pointer;
-    outline: none;
-    transition: 0.5s;
-  } */
 }
 
 /* Small screen devices (600px and above) */
