@@ -221,6 +221,7 @@ let modal = document.querySelector( ".answer-modal" );
 let close = document.querySelector( ".close" );
 let guessSpot = document.getElementById( "answer-spot" );
 let letterInput = document.getElementById( 'user-input' );
+let answerButton = document.getElementById( 'answer-button' );
 
 
 
@@ -297,8 +298,9 @@ getUserInput = () => {
           document.getElementById( "guesses-left" ).innerHTML = `You have ${guessesLeft} guesses left!`;
           userAnswerInput = document.getElementById( "user-answer-input" );
           letterInput.style.display = 'none';
-
         }
+          letterInput.style.display = 'inline';
+
       }
       if (userAnswerInput === choice.toLowerCase()) {
         alert( "You Win" );
@@ -306,7 +308,7 @@ getUserInput = () => {
         modal.style.display = "none";
         document.getElementById( "answer-spot" ).innerHTML = choice;
         letterInput.style.display = 'none';
-        
+        answerButton.style.display = 'none';
       }
     });
 
@@ -327,7 +329,6 @@ getUserInput = () => {
           alert('Pick a letter')
         }
         document.getElementById("user-input").value = "";
-
 
         if ( !lettersGuessed.includes( userInput ) &&
           !lettersGuessed.includes( userInput.toLowerCase() ) &&
@@ -360,7 +361,6 @@ getUserInput = () => {
         for (var i = 0; i < wordSplit.length; i++) {
           if (userInput === wordSplit[i] ||upper === wordSplit[i] ||lower === wordSplit[i]) {
             underscores[i] = wordSplit[i];
-            // console.log(underscores);
             guessSpot.innerHTML = underscores.join("");
           }
         }
@@ -382,6 +382,7 @@ getUserInput = () => {
           guessSpot.innerHTML = choice; 
           document.getElementById( "guesses-left" ).innerHTML = `Great Job! Play again!`;
           letterInput.style.display = 'none';
+          answerButton.style.display = 'none';
           
         }
         guessesLeft = guessesLeft;
@@ -389,7 +390,7 @@ getUserInput = () => {
     });
 };
 
-// 10. Check button on user answer input 
+// 10. Check button on user answer input modal
 
 checkButton = () => {
   let check = document.getElementById( "check" );
