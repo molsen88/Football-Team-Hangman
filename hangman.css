@@ -128,8 +128,8 @@ body {
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
   body {
-    background: url("pexels-jonathan-petersson-399187.jpg") no-repeat center
-      center fixed;
+    background: url("pexels-sergio-souza-2291006.jpg") no-repeat center center
+      fixed;
     font-family: "Nunito", sans-serif;
     overflow: hidden;
   }
