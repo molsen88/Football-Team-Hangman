@@ -3,10 +3,10 @@
 let teams = [
   "Liverpool FC",
   "Manchester City",
-  "Tottenham",
-  "Chelsea",
+  "Tottenham Hotspur",
+  "Chelsea FC",
   "Manchester United",
-  "Arsenal",
+  "Arsenal FC",
   "Everton",
   "Burnley",
   "Wolverhampton",
