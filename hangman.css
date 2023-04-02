@@ -181,8 +181,9 @@ body {
   }
 
   #answer-spot {
-    font-size: 35px;
-    color: #f3f8fa;
+    font-size: 45px;
+    /* color: #f3f8fa; */
+    color: #af756f;
   }
 
   .answer-input {
